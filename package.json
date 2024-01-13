@@ -12,6 +12,10 @@
   "license": "ISC",
   "dependencies": {
     "dotenv": "^16.3.1",
-    "openai": "^4.24.7"
+    "langchain": "^0.1.2",
+    "openai": "^4.24.7",
+    "pdf-parse": "^1.1.1",
+    "youtube-transcript": "^1.0.6",
+    "youtubei.js": "^5.8.0"
   }
 }
