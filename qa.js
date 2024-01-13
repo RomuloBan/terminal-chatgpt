@@ -39,14 +39,12 @@ const docsFromPDF = (pdf) => {
 const laodStore = async () => {
   const videoDocs = await docsFromYTVideo(video)
   const pdfDocs = await docsFromPDF('xbox.pdf')
-  console.log(videoDocs[0], pdfDocs[0])
   return createStore([...videoDocs, ...pdfDocs])
 }
 
 const query = async () => {
   const store = await laodStore()
   const results = await store.similaritySearch(question, 2)
-  console.log(results)
   const response = await openai.chat.completions.create({
     model: 'gpt-4',
     temperature: 0,
